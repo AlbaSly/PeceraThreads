@@ -19,7 +19,7 @@ import javax.swing.JLabel;
  */
 public class AnimalMarino extends Thread {
     //Tamaño en pixeles del sprite
-    public static final int SPRITE_RESOLUTION = 120;
+    private static final int SPRITE_RESOLUTION = 120;
     
     private final Pecera contenedorPecera;
     
@@ -145,9 +145,7 @@ public class AnimalMarino extends Thread {
      * @param y Posición en y
      */
     public void setLocation(int x, int y) {
-        this.contenedorPecera.add(this.etiquetaAnimal);
         this.etiquetaAnimal.setBounds(x, y, SPRITE_RESOLUTION, SPRITE_RESOLUTION);
-        
         this.contenedorPecera.add(this.etiquetaAnimal);
     }
     
